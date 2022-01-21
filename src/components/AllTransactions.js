@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios"
+import {Link, useNavigate} from "react-router-dom"
 const API = process.env.REACT_APP_API_URL
 
 export default function AllTransactions() {
@@ -20,15 +21,15 @@ let accountTotal = 0
 transactions.forEach(e => {
     accountTotal+= Number(e.amount)
 });
-let allTransactions = transactions.map((transaction)=>{
+let allTransactions = transactions.map((transaction , index)=>{
   return (
-    <tbody classname="Display">
+    <tbody className="Display">
       <tr>
         <td>
           {transaction.date}
         </td>
         <td>
-          {transaction.name}
+          <Link to={`/${index}`}>{transaction.name}</Link>
         </td>
         <td className="Amount">
           {transaction.amount}

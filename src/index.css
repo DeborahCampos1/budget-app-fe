@@ -1,11 +1,11 @@
 
 body{
-  background-color: rgb(157, 189, 204);
+  background-color: #90caf9;
 }
 .All{
     text-align: center;
 }
-.Nav a{
+ a{
     text-decoration: none;
 }
 .Nav{
@@ -14,8 +14,9 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+    text-align: center;
     padding: 1em;
-    background: rgb(87, 148, 156);
+    background: linear-gradient(#64e664bd, #2785a1);
     border: solid 0.25px purple;
     border-radius: 10px;
 }
@@ -24,20 +25,17 @@ h1{
     text-align: center;
   }
   button{
-    text-align: center;
     height: 60px;
-    width: 200px;
+    width: 160px;
     text-transform: uppercase;
-    /* padding: 10px 10px; */
     border-radius: 10px;
-    background-color: rgb(157, 189, 204);
+    background-color: rgb(112, 181, 212);
   }
   button:hover{
-    background-color: rgb(188, 199, 204);
-
+    background-color: rgb(154, 202, 224);
   }
   a:hover{
-    color:rgb(237, 238, 174);
+    color:rgb(241, 227, 240);
   }
   table{
     width: 60%;
@@ -51,5 +49,78 @@ h1{
     border: 1px solid #E1E1E1;
     text-transform: uppercase;
   }
+  .Show{
+    text-align: center;
+    width: 60%;
+    padding: 1rem;
+    margin: auto;
+    /* border: solid 2px purple; */
+    margin: auto;
+    align-items: center;
+    font-size: 125%;
+    background-color: rgb(202, 213, 228);
+  }
+  .Show button{
+    text-align: center;
+    height: 30px;
+    width: 100px;
+    text-transform: uppercase;
+
+  }
+  .Entry{
+    margin-bottom: 1rem;
+  }
+  .Edit{
+    margin: auto;
+    width: 95%;
+  }
     
-  
+  label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  input[type]{
+    display: block;
+    width: 20%;
+    margin: 0.5rem;
+    font-size: 130%;
+    text-align: center;
+    margin: auto;
+  }
+  input[type=text]{
+    height: 38px;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-size: 115%;
+    text-align: center;
+  }
+  input[type=number]{
+    height: 25px;
+    font-size: 115%;
+  }
+  input[type=submit]{
+    width: 15%;
+    height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 25px;
+  }
+.Edit form{
+  margin-top: 25px;
+}
+.EditButton button{
+  display: block;
+  margin:auto;
+  background-color: grey;
+  height: 30px;
+  width: 15%;
+  margin-top: 20px;
+}

@@ -4,7 +4,7 @@ import AllTransactions from "./components/AllTransactions";
 import EditTransaction from "./components/EditTransaction";
 import ErrorMsg from "./components/ErrorMsg";
 import NewTransaction from "./components/NewTransaction";
-import ShowTransaction from "./components/ShowTransactions";
+import ShowTransaction from "./components/ShowTransaction";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/new" element={<NewTransaction />} />
           <Route path="/:index" element={<ShowTransaction />} />
           <Route path="/:index/edit" element={<EditTransaction />} />
-          <Route path="*" element={<ErrorMsg />} />
+          <Route path="/error" element={<ErrorMsg />} />
         </Routes>
       </Router>
     </div>
