@@ -1,4 +1,7 @@
 
+body{
+  background-color: rgb(157, 189, 204);
+}
 .All{
     text-align: center;
 }
@@ -6,17 +9,18 @@
     text-decoration: none;
 }
 .Nav{
+    width: 60%;
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     padding: 1em;
-    background: lightgreen;
-    margin-bottom: 0.25em;
+    background: rgb(87, 148, 156);
     border: solid 0.25px purple;
     border-radius: 10px;
 }
 h1{
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
   }
   button{
@@ -26,10 +30,26 @@ h1{
     text-transform: uppercase;
     /* padding: 10px 10px; */
     border-radius: 10px;
+    background-color: rgb(157, 189, 204);
   }
   button:hover{
-    background-color: rgb(157, 189, 204);
+    background-color: rgb(188, 199, 204);
+
   }
   a:hover{
     color:rgb(237, 238, 174);
   }
+  table{
+    width: 60%;
+    margin: auto;
+    border-spacing: 2px;
+    margin-bottom: 6rem;
+  }
+  td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #E1E1E1;
+    text-transform: uppercase;
+  }
+    
+  

@@ -5,6 +5,7 @@ export default function NavBar() {
       <nav className="Nav">
         <div><h1><Link to="/">Budget App</Link></h1></div>
         <div><button><Link to="/new">New Transaction</Link></button></div>
+        <div><button><Link to="/">Transaction Summary</Link></button></div>
       </nav>
     );
   }

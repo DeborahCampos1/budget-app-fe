@@ -6,7 +6,7 @@ const API = process.env.REACT_APP_API_URL;
 export default function ShowTransactions() {
     return (
       <div className="Show">
-  
+        
       </div>
     );
   }
