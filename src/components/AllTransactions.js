@@ -1,29 +1,32 @@
 import { useState, useEffect } from "react";
 import axios from "axios"
-import {Link, useNavigate} from "react-router-dom"
+import { Link } from "react-router-dom"
+import { currencyFormatter } from "./Utility";
 const API = process.env.REACT_APP_API_URL
 
-export default function AllTransactions() {
+export default function AllTransactions({getTotal}) {
   const[transactions, setTransactions] = useState([]);
 
   useEffect(()=>{
     axios.get(`${API}/transactions`)
     .then((res)=>{
-      console.log(res)
+      console.log(res.data)
       setTransactions(res.data)
     }).catch((err)=>{
       throw err
     });
   }, [])
 
-console.log(transactions)
 let accountTotal = 0 
 transactions.forEach(e => {
     accountTotal+= Number(e.amount)
 });
+
+getTotal(accountTotal);
+
 let allTransactions = transactions.map((transaction , index)=>{
   return (
-    <tbody className="Display">
+    <tbody key={index} className="Display">
       <tr>
         <td>
           {transaction.date}
@@ -32,7 +35,7 @@ let allTransactions = transactions.map((transaction , index)=>{
           <Link to={`/${index}`}>{transaction.name}</Link>
         </td>
         <td className="Amount">
-          {transaction.amount}
+          {currencyFormatter.format(transaction.amount)}
         </td>
       </tr>
     </tbody>
@@ -41,7 +44,7 @@ let allTransactions = transactions.map((transaction , index)=>{
 })
     return (
       <div className="All">
-        <h1 classname="Total" style={accountTotal > 1000 ? {color: "green"}: accountTotal < 0? {color: "red"}: {color: "white"}}>Bank Account Total: {accountTotal}</h1>
+        <h1 className="Total" style={accountTotal > 1000 ? {color: "green"}: accountTotal < 0? {color: "red"}: {color: "white"}}>Bank Account Total: {currencyFormatter.format(accountTotal)}</h1>
       <table>
         {allTransactions}
       </table>

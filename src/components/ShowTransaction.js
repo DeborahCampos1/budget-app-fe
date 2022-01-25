@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react";
 import {Link, useParams, useNavigate} from "react-router-dom";
+import { currencyFormatter } from "./Utility";
 import axios from "axios"
 const API = process.env.REACT_APP_API_URL;
 
@@ -29,7 +30,7 @@ export default function ShowTransaction() {
       <div className="Show">
         <div className="Entry">{indexedTransaction.date}</div>
         <div className="Entry">{indexedTransaction.name}</div>
-        <div className="Entry">{indexedTransaction.amount}</div>
+        <div className="Entry">{currencyFormatter.format(indexedTransaction.amount)}</div>
         <div className="Entry">{indexedTransaction.from}</div>
         <button><Link to="/">Back</Link></button>
         <button><Link to={`/${index}/edit`}>Edit</Link></button>

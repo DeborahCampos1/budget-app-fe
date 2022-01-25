@@ -28,7 +28,7 @@ export default function NewTransaction() {
     return (
       <div className="New">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="date">Date</label>
+          <label htmlFor="date">Date:</label>
           <input
           id="date"
           value={transaction.date}
@@ -37,7 +37,7 @@ export default function NewTransaction() {
           placeholder="Date"
           required
           />
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Name:</label>
           <input
           id="name"
           value={transaction.name}
@@ -46,7 +46,7 @@ export default function NewTransaction() {
           placeholder="Name"
           required
           />
-          <label htmlFor="amount">Amount</label>
+          <label htmlFor="amount">Amount:</label>
           <input
           id="amount"
           value={transaction.amount}
@@ -55,7 +55,7 @@ export default function NewTransaction() {
           placeholder="Amount"
           required
           />
-          <label htmlFor="from">From</label>
+          <label htmlFor="from">From:</label>
           <input
           id="from"
           value={transaction.from}

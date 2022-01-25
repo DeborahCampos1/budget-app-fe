@@ -8,18 +8,34 @@ body{
  a{
     text-decoration: none;
 }
-.Nav{
-    width: 60%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    text-align: center;
+.Nav-container{
+  /* display: flex; */
+    width: 80%;
+    margin:  0 auto;
     padding: 1em;
     background: linear-gradient(#64e664bd, #2785a1);
     border: solid 0.25px purple;
     border-radius: 10px;
+    overflow: auto;
 }
+.Nav-items{
+  display: grid;
+  /* flex-wrap: nowrap; */
+  align-items: center;
+  /* justify-content: space-between; */
+  /* flex-shrink: 3; */
+  align-content: space-between;
+  /* float:right; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* align-self: stretch; */
+  /* box-sizing: border-box; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+  text-align: center;
+
+}
+
 h1{
     font-size: 3rem;
     text-align: center;
