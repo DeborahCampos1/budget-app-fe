@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios"
 const API = process.env.REACT_APP_API_URL
 
@@ -64,8 +64,9 @@ export default function NewTransaction() {
           placeholder="From"
           required
           />
-          <input type="submit" />
+          <input className="EditSubmit" type="submit" />
         </form>
+        <div className="EditButton"><button><Link to={`/`}>Back</Link></button></div>
       </div>
     );
   }

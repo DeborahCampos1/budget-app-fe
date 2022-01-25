@@ -10,7 +10,6 @@ export default function AllTransactions({getTotal}) {
   useEffect(()=>{
     axios.get(`${API}/transactions`)
     .then((res)=>{
-      console.log(res.data)
       setTransactions(res.data)
     }).catch((err)=>{
       throw err

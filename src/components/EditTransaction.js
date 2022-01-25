@@ -76,7 +76,7 @@ export default function EditTransaction() {
           placeholder="From"
           required
           />
-          <input type="submit" />
+          <input className="EditSubmit" type="submit" />
         </form>
         <div className="EditButton"><button><Link to={`/`}>Back</Link></button></div>
       </div>
