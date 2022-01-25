@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios"
 import { Link } from "react-router-dom"
 import { currencyFormatter } from "./Utility";
+
 const API = process.env.REACT_APP_API_URL
 
 export default function AllTransactions({getTotal}) {

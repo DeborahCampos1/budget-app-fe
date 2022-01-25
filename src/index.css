@@ -1,6 +1,7 @@
 
 body{
-  background-color: #90caf9;
+  /* background-color: #90caf9; */
+  background-image: url("https://wallpapercave.com/wp/wp2742500.gif");
 }
 .All{
     text-align: center;
@@ -10,7 +11,7 @@ body{
 }
 .Nav-container{
   /* display: flex; */
-    width: 80%;
+    width: 70%;
     margin:  0 auto;
     padding: 1em;
     background: linear-gradient(#64e664bd, #2785a1);
@@ -42,13 +43,13 @@ h1{
   }
   button{
     height: 60px;
-    width: 160px;
+    width: 110px;
     text-transform: uppercase;
     border-radius: 10px;
     background-color: rgb(82, 160, 199);
   }
   button:hover{
-    background-color: rgb(154, 202, 224);
+    background-color: rgb(117, 152, 169);
   }
   a:hover{
     color:rgb(241, 227, 240);
